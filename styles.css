@@ -8,6 +8,14 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #1a1a1a;
     overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .container {
@@ -17,6 +25,13 @@ body {
     border-left: 20px solid #0d4d0d;
     border-right: 20px solid #0d4d0d;
     position: relative;
+    width: 100%;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 100%;
+    }
 }
 
 /* Header Section */
@@ -26,6 +41,7 @@ body {
     text-align: center;
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
 
 .header::before,
@@ -84,6 +100,7 @@ body {
     min-height: 400px;
     max-height: 500px;
     position: relative;
+    width: 100%;
 }
 
 .activity-bg {
@@ -93,6 +110,7 @@ body {
     justify-content: center;
     padding: 20px;
     position: relative;
+    width: 100%;
 }
 
 .martial-arts-bg,
@@ -132,6 +150,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 .activity-image img {
@@ -154,6 +173,7 @@ body {
     background-color: #0d4d0d;
     padding: 30px 20px;
     text-align: center;
+    width: 100%;
 }
 
 .extracurricular-title {
@@ -169,6 +189,7 @@ body {
     min-height: 500px;
     max-height: 600px;
     position: relative;
+    width: 100%;
 }
 
 .creative-image {
@@ -198,6 +219,7 @@ body {
     background-color: #0d4d0d;
     padding: 30px 20px;
     text-align: center;
+    width: 100%;
 }
 
 .contact-content {
@@ -221,55 +243,89 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
-        border-left: 10px solid #0d4d0d;
-        border-right: 10px solid #0d4d0d;
+        border-left: 5px solid #0d4d0d;
+        border-right: 5px solid #0d4d0d;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .header {
+        padding: 25px 15px;
+    }
+
+    .header::before,
+    .header::after {
+        width: 40px;
+        height: 40px;
+        top: 5px;
+    }
+
+    .header::before {
+        left: 10px;
+    }
+
+    .header::after {
+        right: 10px;
     }
 
     .title-line-1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        letter-spacing: 1px;
     }
 
     .title-line-2 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+        letter-spacing: 1px;
+    }
+
+    .gold-divider {
+        margin: 15px 0;
     }
 
     .activity-section {
         flex-direction: column;
         min-height: auto;
+        max-height: none;
     }
 
     .activity-bg {
         flex: 0 0 auto;
-        min-height: 150px;
+        min-height: 120px;
+        padding: 15px;
+        width: 100%;
     }
 
     .activity-title {
-        font-size: 2rem;
+        font-size: 1.5rem;
         writing-mode: horizontal-tb;
+        letter-spacing: 2px;
     }
 
     .activity-image {
-        min-height: 300px;
-        max-height: 400px;
-        height: 400px;
+        min-height: 250px;
+        max-height: 350px;
+        height: auto;
+        width: 100%;
     }
     
     .activity-image img {
-        max-height: 400px;
+        max-height: 350px;
         object-fit: contain;
     }
     
     .creative-section {
-        max-height: 400px;
+        max-height: 350px;
+        min-height: 350px;
     }
     
     .creative-image {
-        max-height: 400px;
-        height: 400px;
+        max-height: 350px;
+        height: 350px;
+        width: 100%;
     }
     
     .creative-image img {
-        max-height: 400px;
+        max-height: 350px;
         object-fit: contain;
     }
 
@@ -277,14 +333,96 @@ body {
         flex-direction: column;
     }
 
+    .extracurricular-banner {
+        padding: 20px 15px;
+    }
+
     .extracurricular-title {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+
+    .contact-section {
+        padding: 20px 15px;
     }
 
     .contact-content {
-        font-size: 1.2rem;
+        font-size: 1rem;
         flex-direction: column;
-        gap: 10px;
+        gap: 8px;
+    }
+
+    .phone-icon {
+        font-size: 1.5rem;
+    }
+}
+
+/* Extra small devices (phones, 480px and down) */
+@media (max-width: 480px) {
+    .container {
+        border-left: 3px solid #0d4d0d;
+        border-right: 3px solid #0d4d0d;
+    }
+
+    .header {
+        padding: 20px 10px;
+    }
+
+    .title-line-1 {
+        font-size: 1.5rem;
+    }
+
+    .title-line-2 {
+        font-size: 1.1rem;
+    }
+
+    .activity-bg {
+        min-height: 100px;
+        padding: 12px;
+    }
+
+    .activity-title {
+        font-size: 1.3rem;
+        letter-spacing: 1px;
+    }
+
+    .activity-image {
+        min-height: 200px;
+        max-height: 300px;
+    }
+    
+    .activity-image img {
+        max-height: 300px;
+    }
+
+    .creative-section {
+        max-height: 300px;
+        min-height: 300px;
+    }
+    
+    .creative-image {
+        max-height: 300px;
+        height: 300px;
+    }
+    
+    .creative-image img {
+        max-height: 300px;
+    }
+
+    .extracurricular-banner {
+        padding: 15px 10px;
+    }
+
+    .extracurricular-title {
+        font-size: 0.95rem;
+    }
+
+    .contact-section {
+        padding: 15px 10px;
+    }
+
+    .contact-content {
+        font-size: 0.9rem;
     }
 }
 
