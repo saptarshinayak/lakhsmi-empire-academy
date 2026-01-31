@@ -94,6 +94,13 @@ html {
     box-shadow: 0 2px 4px rgba(255, 215, 0, 0.3);
 }
 
+@media (max-width: 768px) {
+    .gold-divider {
+        height: 2px;
+        margin: 10px 0;
+    }
+}
+
 /* Activity Sections */
 .activity-section {
     display: flex;
@@ -156,7 +163,7 @@ html {
 .activity-image img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
     display: block;
     max-width: 100%;
@@ -190,6 +197,7 @@ html {
     max-height: 600px;
     position: relative;
     width: 100%;
+    overflow: hidden;
 }
 
 .creative-image {
@@ -207,7 +215,7 @@ html {
 .creative-image img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
     display: block;
     max-width: 100%;
@@ -279,7 +287,8 @@ html {
     }
 
     .gold-divider {
-        margin: 15px 0;
+        margin: 10px 0;
+        height: 2px;
     }
 
     .activity-section {
@@ -302,31 +311,41 @@ html {
     }
 
     .activity-image {
-        min-height: 250px;
-        max-height: 350px;
-        height: auto;
+        min-height: 200px;
+        max-height: 280px;
+        height: 280px;
         width: 100%;
     }
     
     .activity-image img {
-        max-height: 350px;
-        object-fit: contain;
+        max-height: 280px;
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
     }
     
     .creative-section {
-        max-height: 350px;
-        min-height: 350px;
+        max-height: 300px;
+        min-height: 250px;
+        height: auto;
     }
     
     .creative-image {
-        max-height: 350px;
-        height: 350px;
+        max-height: 300px;
+        height: 300px;
         width: 100%;
+        overflow: hidden;
     }
     
     .creative-image img {
-        max-height: 350px;
-        object-fit: contain;
+        max-height: 300px;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
     }
 
     .chess {
@@ -334,12 +353,13 @@ html {
     }
 
     .extracurricular-banner {
-        padding: 20px 15px;
+        padding: 18px 15px;
     }
 
     .extracurricular-title {
-        font-size: 1.1rem;
+        font-size: 1rem;
         letter-spacing: 1px;
+        line-height: 1.4;
     }
 
     .contact-section {
@@ -376,37 +396,53 @@ html {
         font-size: 1.1rem;
     }
 
+    .gold-divider {
+        margin: 10px 0;
+        height: 2px;
+    }
+
     .activity-bg {
-        min-height: 100px;
-        padding: 12px;
+        min-height: 90px;
+        padding: 10px;
     }
 
     .activity-title {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         letter-spacing: 1px;
     }
 
     .activity-image {
-        min-height: 200px;
-        max-height: 300px;
+        min-height: 180px;
+        max-height: 250px;
+        height: 250px;
     }
     
     .activity-image img {
-        max-height: 300px;
+        max-height: 250px;
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
     }
 
     .creative-section {
-        max-height: 300px;
-        min-height: 300px;
+        max-height: 250px;
+        min-height: 200px;
+        height: auto;
     }
     
     .creative-image {
-        max-height: 300px;
-        height: 300px;
+        max-height: 250px;
+        height: 250px;
     }
     
     .creative-image img {
-        max-height: 300px;
+        max-height: 250px;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
     }
 
     .extracurricular-banner {
@@ -414,7 +450,8 @@ html {
     }
 
     .extracurricular-title {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
+        line-height: 1.3;
     }
 
     .contact-section {
@@ -422,7 +459,12 @@ html {
     }
 
     .contact-content {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
+        gap: 8px;
+    }
+
+    .phone-icon {
+        font-size: 1.2rem;
     }
 }
 
